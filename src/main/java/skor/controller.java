@@ -7,12 +7,14 @@ import java.util.Locale.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+@Controller
 public class controller {
     
     @Autowired
@@ -48,13 +50,13 @@ public class controller {
     @GetMapping(value = "/admin")
     public String admin(Model model) {
         System.out.println("masuk");
-        return "input";
+        return "input.html";
     }
 
     @GetMapping(value = "/grup1")
     public String grup1(Model model) {
-        
-        return "a";
+        System.out.println("masuk");
+        return "a.html";
     }
 
     @GetMapping(value = "/grup2")

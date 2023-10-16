@@ -4,7 +4,9 @@ import java.time.LocalDate;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SkorRepository extends JpaRepository <skor, Integer>{
     
     @Query(value = "SELECT count(*) FROM skor WHERE skor_1 IS NOT NULL",
