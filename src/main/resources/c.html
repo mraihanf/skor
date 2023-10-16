@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>skor 3</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center" style="font-size: 200px;">GROUP 3</h1>
+        <input type="text" id="skor3" class="form-control text-center" style="border-color: black; height: 200px; font-size: 200px;">
+    </div>
+
+</body>
+<script src="./bootstrap.bundle.min.js"></script>
+<script src="./jquery-3.7.1.min.js"></script>
+<script inline="javascript">
+    /*<![CDATA[*/
+    $(document).ready(function () {
+        $.get(`/C`, function(data){
+            $("#skor3").val(data.data)
+        })
+    })
+    /*]]>*/
+</script>
+
+</html>

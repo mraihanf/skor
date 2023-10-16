@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>Input</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container" style="margin-top: 20%;">
+            <label for="inputscor1">Input 1</label>
+            <input class="form-control" type="text" id="inputscor1">
+            <button class="btn-primary" onclick="inputscor1()">Save 1</button>
+            <button class="btn-success" onclick="updatescor1()">Update 1</button>
+            <br>
+            <label for="inputscor1">Input 2</label>
+            <input class="form-control" type="text" id="inputscor2">
+            <button class="btn-warning" onclick="inputscor2()">Save 2</button>
+            <button class="btn-success" onclick="updatescor2()">Update 2</button>
+            <br>
+            <label for="inputscor1">Input 3</label>
+            <input class="form-control" type="text" id="inputscor3">
+            <button class="btn-success" onclick="inputscor3()">Save 3</button>
+            <button class="btn-success" onclick="updatescor3()">Update 3</button>
+        </div>
+    </div>
+
+</body>
+<script src="./bootstrap.bundle.min.js"></script>
+<script src="./jquery-3.7.1.min.js"></script>
+<script inline="javascript">
+    /*<![CDATA[*/
+    $(document).ready(function () {
+
+    })
+
+    function inputscor1() {
+        $.ajax({
+            url: `/input?skor1=${$("#inputscor1").val()}`,
+            method: 'post',
+        })
+    }
+    function inputscor2() {
+        $.ajax({
+            url: `/input?skor2=${$("#inputscor2").val()}`,
+            method: 'post',
+        })
+    }
+    function inputscor3() {
+        $.ajax({
+            url: `/input?skor3=${$("#inputscor3").val()}`,
+            method: 'post',
+        })
+    }
+
+    function updatescor1() {
+        $.ajax({
+            url: `/put?skor1=${$("#inputscor1").val()}`,
+            method: 'put',
+        })
+    }
+    function updatescor2() {
+        $.ajax({
+            url: `/input?skor2=${$("#inputscor2").val()}`,
+            method: 'put',
+        })
+    }
+    function updatescor3() {
+        $.ajax({
+            url: `/input?skor3=${$("#inputscor3").val()}`,
+            method: 'put',
+        })
+    }
+    /*]]>*/
+</script>
+
+</html>
